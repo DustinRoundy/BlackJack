@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+    <script src="scripts.js" defer></script>
+    <style>
+        .flex{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .house{
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+        .player{
+            display: flex;
+            justify: flex-end;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Blackjack</h1>
+    <div class="flex">
+        <h2>House:<span id="houseScore"></span></h2>
+        <div class="house" id="house">
+            <img class="hcard1" src="back.png"/>
+            <img class="hcard2" src="back.png"/>
+        </div>
+        <h2>Player:<span id="playerScore"></span></h2>
+        <div class="player" id="player">
+            <!--<img class="pcard1" src="back.png"/>-->
+            <!--<img class="pcard2" src="back.png"/>-->
+        </div>
+    </div>
+    <!--<div class="flex">-->
+        <!--<img id="card1"></img>-->
+        <!--<img id="card2"></img>-->
+    <!--</div>-->
+    <button onclick="getCards(user, 1)" id="hit">Hit</button>
+    <button onclick="stay()" id="stay">Stay</button>
+</body>
+</html>
